@@ -1,0 +1,11 @@
+# .lefthook.yml
+pre-commit:
+  commands:
+    lint:
+      run: yarn lint
+    typecheck:
+      run: yarn typecheck
+commit-msg:
+  commands:
+    commitlint:
+      run: yarn commitlint --edit {1}

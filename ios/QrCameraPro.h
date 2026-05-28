@@ -1,5 +1,13 @@
-#import <QrCameraProSpec/QrCameraProSpec.h>
+#import <Foundation/Foundation.h>
+#import <React/RCTEventEmitter.h>
 
-@interface QrCameraPro : NSObject <NativeQrCameraProSpec>
+#ifdef __cplusplus
+#import <QrCameraProSpec/QrCameraProSpec.h>
+#endif
+
+@interface QrCameraPro : RCTEventEmitter
+#ifdef __cplusplus
+<NativeQrCameraProSpec>
+#endif
 
 @end
