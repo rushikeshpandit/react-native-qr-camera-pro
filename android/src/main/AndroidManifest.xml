@@ -1,5 +1,33 @@
+<!--
+  AndroidManifest.xml — QrCameraPro library manifest.
+
+  Declares the permissions and hardware features required by the scanner.
+  These entries are merged into the host application's manifest at build time
+  via Gradle's manifest merger.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      CAMERA permission: required to access the device camera for scanning.
+      The user is prompted at runtime (dangerous permission, API 23+).
+      QrCameraProModule.startScanning() handles the runtime permission request.
+    -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <!--
+      Declares that this library requires a camera. Set required="true" so the
+      Play Store filters out devices with no camera hardware at all.
+    -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!--
+      Autofocus improves scan speed and accuracy but is not required —
+      fixed-focus cameras can still scan barcodes at close range.
+    -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
 </manifest>
