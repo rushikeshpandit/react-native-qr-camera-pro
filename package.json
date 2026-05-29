@@ -1,6 +1,6 @@
 {
   "name": "react-native-qr-camera-pro",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "react-native-qr-camera-pro is a lightweight, high-performance React Native QR and barcode scanner built with native Swift and Kotlin using Fabric and TurboModules. It provides fast QR and barcode scanning, torch control, customizable overlay UI, and production-grade camera lifecycle handling with zero unnecessary dependencies. Designed for the New React Native Architecture with strict TypeScript support, clean APIs, and optimized native performance for both iOS and Android",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
